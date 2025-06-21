@@ -239,6 +239,7 @@ body {
     border-radius: 15px;
     overflow: hidden;
     position: relative; 
+    height: 90%;
 }
 
 .quem-somos-video video {
@@ -312,7 +313,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
     .ladoalado {
         grid-template-columns: 1fr;
         padding: 20px;
@@ -350,6 +351,7 @@ body {
 
     .quem-somos-video {
         height: 300px;
+        margin: auto;
     }
 
     .constellation-animation {
