@@ -10,6 +10,7 @@ html {
 .questrial {
     font-family: "Questrial", sans-serif;
     text-align: justify;
+    margin-bottom: 10%;
 }
 
 header {
@@ -102,7 +103,7 @@ body {
 .hero-content h3 {
     margin: 0;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    opacity: 1; /* Ajuste a opacidade para 1 */
+    opacity: 1;
 }
 
 .hero-content h1 {
@@ -248,6 +249,48 @@ body {
     border-radius: 15px;
     filter: brightness(0.5); 
 }
+
+#valores {
+    text-align: center; 
+    padding: 40px 20px; 
+    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, white, #f4f4f4);
+}
+
+.josefin-sans {
+    font-size: 2rem; 
+    margin-bottom: 20px;
+}
+
+.valores-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.valor-box {
+    background-color: white; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    padding: 20px; 
+    width: 150px;
+    text-align: center; 
+    transition: transform 0.3s ease; 
+    font-family: "Questrial", sans-serif;
+}
+
+.valor-box:hover {
+    transform: scale(1.05); 
+}
+
+.valor-icon {
+    width: 30px; 
+    height: 30px; 
+    object-fit: contain; 
+    margin-bottom: 10px; 
+}
+
 
 .constellation-animation {
     position: absolute; 
