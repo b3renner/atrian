@@ -64,3 +64,22 @@ function animateConstellation() {
         drawLine(lines[2], 0); 
     }, 3000); 
 }
+
+const animatedElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+
+const animationObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+            animationObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+animatedElements.forEach(el => animationObserver.observe(el));
+
+window.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    header.classList.add('appear');
+  });
+  
