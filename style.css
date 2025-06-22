@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .josefin-sans {
@@ -58,6 +59,7 @@ header {
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 #hero-video {
@@ -413,6 +415,161 @@ body {
         transform: translateY(-20%);
     }
 }
+
+.services-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #f5f5f5 0%, white 100%);
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  
+  .flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 100px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    transform-origin: center center;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(135deg, #03766f, #20dbdb);
+    color: white;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    transform: rotateY(0deg);
+  }
+  
+  .flip-card-back {
+    background-color: #f9f9f9;
+    color: #333;
+    transform: rotateY(180deg);
+    font-family: 'Questrial', sans-serif;
+  }
+  
+
+  #projetos {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(to top, #212121 0%
+    , rgb(125, 125, 125) 50%
+    , rgb(255, 254, 254) 100%);
+  }
+
+  .carrossel {
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .carrossel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+    padding-top: 5%;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  .card-projeto {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    width: 320px; /* Aumentado de 250px para 320px */
+    flex: none;
+    padding: 20px; /* Aumentado para dar mais respiro */
+    text-align: center;
+    margin-right: 30px; /* Aumentado para manter o espaçamento entre os cards */
+    transition: transform 0.3s ease;
+  }
+  
+  .card-projeto img {
+    width: 100%;
+    height: 180px; /* Aumentado de 140px */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px; /* Um pouco mais de espaço abaixo da imagem */
+  }
+  
+  .card-projeto h4 {
+    font-size: 1.2rem; /* Levemente maior para equilibrar com o novo tamanho */
+  }
+  
+  .card-projeto p {
+    font-size: 1rem;
+  }
+  
+
+  #feedbacks {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #212121, #000000);
+    text-align: center;
+    color: whitesmoke;
+  }
+
+  .feedback-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .feedback-box {
+    background: rgb(63, 63, 63);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-family: "Questrial", sans-serif;
+  }
+
+  .stars {
+    font-size: 1.5rem;
+    color: #FFD700;
+    animation: sparkle 2s infinite ease-in-out;
+  }
+
+  @keyframes sparkle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
 
 @media (max-width: 950px) {
     .ladoalado {
